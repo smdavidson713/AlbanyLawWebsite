@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+}
+body {
+  background-color: #E8E8E8;
+  margin: 0;
+  padding: 0;
+  color: 211413;
+}
+.row {
+    width:100%;
+}
+.row:after,
+.row:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/** HEADER**/
+#header{
+	outline-width: 5px;
+	outline-color: black;
+	outline-style: solid;
+  padding: 10px;
+	width: 100%;
+  background-color: #AC2A32;	
+}
+
+#header h1{
+	color: white;
+}
+#header img{
+  float: right;
+  height: 90px;
+  object-fit: contain;
+
+}
+/**FOOTER**/
+#footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 5%;
+  font-size: small;
+  color: white;
+  background-color: #AC2A32;
+}
+/**NAVIGATION BAR**/
+#nav{
+  margin: 0;
+  padding: 15px;
+  width: 200px;
+  background-color: #D8D8D8;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  outline-color: black;
+  outline-width: 2px;
+  outline-style: solid;
+}
+#nav a{
+  display: block;
+  color: black;
+  padding: 13px;
+  text-decoration: none;
+}
+#nav a:hover{
+  background-color: #A0A0A0;
+  color: white;
+}
+#nav a.active {
+  background-color: #225b77;
+  color: white;
+}
+#popup {
+  display: inline-block;
+  opacity: 0;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  padding: 1em;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #888;
+  box-shadow: 1px 1px .5em 0 rgba(0, 0, 0, .5);
+  transition: opacity .3s ease-in-out;
+  z-index: 100;
+}
+
+#popup.hidden {
+  display: none;
+}
+#popup.fade-in {
+  opacity: 1;
+}
+#about, #report, #disclaimer, #expenses, #contact{
+  float: right;
+  width: 70%;
+  color: black;
+}
+#modules-podcasts{
+  float: right;
+  width: 82%;
+  color: black;
+  position: relative;
+}
+#modules-podcasts img{
+  position: absolute;
+  top: 0;
+  right: 400px;
+}
+#ualogo{
+  position: absolute;
+  right: -350px;
+  bottom: 150px;
+}
+table, th, td{
+  border-style: solid;
+  border-collapse: collapse;
+  background-color: #F1E1DF;
+ }
+td, th{
+  padding: 5px;
+ }
+#mod1{
+  float: right;
+  width: 70%;
+  color: black;
+}
+#mod4{
+  text-align: center;
+  float: right;
+  width: 58%;
+  color: black;
+}
+#mod7{
+  float: right;
+  width: 80%;
+  color: black;
+}
+#mod5, #mod6{
+  float: right;
+  width: 82.5%;
+  color: black;
+  text-align: center;
+}
+#comps, #others{
+  display: none;
+}
+#show, #show1, #show2{
+  color: red;
+}
+/* Tooltip container */
+.tip1 {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tip1 .tooltip {
+  visibility: hidden;
+  width: 500px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tip1:hover .tooltip {
+  visibility: visible;
+}
+
+#expenses, #report, #contact{
+  margin: 0 auto;
+  width: 750px;
+  text-align: center;
+}
+#checks{
+  text-align: left;
+}
+.gov{
+  display: inline-block;
+  width: 50%;
+  height: 40%;
+  box-shadow: 10px 10px 5px grey;
+  background-color: #F1E1DF;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+
+}
+#meet, #for{
+  height: 100px;
+  width: 100%;
+}
+input[type=text]{
+  width: 100%;
+}
+form{
+  display: inline-block;
+  width: 50%;
+  height: 10%;
+  box-shadow: 10px 10px 5px grey;
+  background-color: #F1E1DF;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+.error{
+  color: red;
+}
+/**RESPONSIVE DESIGN**/
+@media only screen and (max-width: 1200px){
+  #container{
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: auto;
+    }
+  #header, #footer{
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+  #nav{
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  #nav a {
+    float: left;
+  }
+  #about, #report, #disclaimer, #expenses, #contact,
+  .slideshow-container, #mod1, #mod4, #mod5, #mod6, #mod7{
+    width: 100%;
+    overflow-x: hidden;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+  }
+  img{
+    align-items: center;
+    display: block;
+    max-width: 100%
+ }
+ form{
+  display: inline-block;
+  text-align: center;
+ }
+
+}
+/**Slideshow**/
+.slideshow-container {
+    padding: 34px .5em .5em;
+    max-width: 80%;
+    margin: 20px;
+    border: 2px solid black;
+    float: right;
+    background-color: #F1E1DF;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.module-section, .m, .mo{
+    display: none;
+    margin: 1em;
+}
+
+.section-number {
+    width: 10%;
+    float: right;
+    background: #D8D8D8;
+    color: black;
+    padding: .5em;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.active, .activee, .a {
+    display: block;
+}
+
+.prev,
+.next, .p,
+.n, .pr, .ne{
+    width: 100px;
+    padding: 1em;
+    margin: 1em;
+    background: #225b77;
+    color: white;
+    border-radius: 25px;
+}

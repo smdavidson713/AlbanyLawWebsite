@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Albany Law: Reporting Tool </title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		<img src="img/albany-law-school-logo.jpg" alt="logo">
+		<h1>Albany Law School: Nonprofit Lobbying Tool</h1>
+	</div>
+	<div id="nav">
+		<a href="final.html">Home</a>
+		<a href="genlobby.html">General Lobbying Information</a>
+		<a href="lobsocmed.html">Lobbying and Social Media</a>
+		<a href="expense.html">Nonprofit Expense Tracking Tool</a>
+		<a href="lobbying.html" class="active">Nonprofit Lobbying Tool</a>
+		<a href="contact.html">Contact Information</a>
+		<a href="https://www.albanylaw.edu/resources/new-york-non-profit-lobbying-guide-glossary-terms">Term Glossary</a>
+		<a href="disclaimer.html">Disclaimer</a>
+	</div>
+	<div id="report">
+		<h2>Welcome to the Diary Web Tool</h2>
+		<p>This webtool will help you keep track of your organization’s lobbying activity in real time.</p>
+	<div id="rest">
+		<p><strong>What level of government did you lobby?</strong></p>
+		<p>
+			<div class="tip1">(?)
+				<span class="tooltip">District or local offices of elected officials for state positions are state-level government</span>
+			</div>
+		</p>
+		<div class="gov">
+			<select id="test">
+				<option id="disabled">Please choose from the following:</option>
+				<option value="State">State</option>
+				<option value="Municipality">Municipality</option>
+				<option value="both">Both</option>
+			</select>
+			<br>
+			<br>
+			<div id="show">This field is required</div>
+		</div>
+		<p><strong>Did you lobby at the office of an individual or state entity?</strong></p>
+		<p>
+			<div class="tip1">(?)
+				<span class="tooltip">An individual is a state person including statewide elected officials; members of the legislature and legislative employees; heads of State departments and their deputies and assistants, other than members of the board of regents of the university of the State of New York who receive no compensation or are compensated on a per diem basis; officers and employees of statewide elected officials; officers and employees of State departments, boards, bureaus, divisions, commissions, councils, or other State agencies; and employees of public authorities (other than multi-state authorities), public benefit corporations and commissions at least one of whose members is appointment by the governor, and members or directors of such authorities, corporations, and commissions who are compensated other than on a per diem basis.
+				</span>
+			</div>
+		</p>
+		<div class="gov">
+			<select id="off">
+				<option id="disabled">Please choose from the following:</option>
+				<option value="indv">Individual</option>
+				<option value="entity">State Entity</option>
+			</select>
+			<br>
+			<br>
+			<div id="show1">This field is required</div>
+		</div>
+		<p><strong>What office did you Lobby?</strong></p>
+		<p>
+			<div class="tip1">(?)
+				<span class="tooltip">Example of Senator ______ or the Governor’s Office.</span>
+			</div>
+		</p>
+		<form>
+			<label for="office">Name of office:</label>
+			<input type="text" id="office" name="ans" required><br>
+		</form>
+		<p><strong>Who did you meet with?</strong></p>
+		<form>
+			<label for="meet">Name of all individuals representing the office in the meeting:</label><br>
+			<input type="text" id="meet" name="ans" required><br>
+		</form>
+		<p><strong>Did you lobby for legislation or funding?</strong></p>
+		<p>
+			<div class="tip1">(?)
+				<span class="tooltip">Legislation includes action by Congress, any state legislature, any local council, or similar governing body, with respect to acts, bills, resolutions, or similar items (such as legislative confirmation of appointive office), or by the public in referendum, ballot initiative, constitutional amendment, or similar procedure. It does not include actions by executive, judicial, or administrative bodies.<br>
+				Funding includes solicitation, award, or administration of a grant, loan, or agreement involving the Disbursement of Public Monies</span>
+			</div>
+		</p>
+		<div class="gov">
+			<select id="sel">
+				<option id="disabled">Please choose from the following:</option>
+				<option value="legis">Legislation</option>
+				<option value="fund">Funding</option>
+				<option value="both">Both</option>
+				<option value="other">Other</option>
+			</select>
+			<input type="text" id="others">
+			<br>
+			<br>
+			<div id="show2">This field is required</div>
+		</div>
+
+		<p><strong>What did you lobby for?</strong></p>
+		<p><div class="tip1">(?)
+			<span class="tooltip">Provide topic title and applicable number.  Examples include:<br>
+				State Bill<br>
+				Municipal Bill<br>
+				State Executive Order<br>
+				Municipal Executive Order<br> 
+				State Law<br>
+				Municipal Law<br>
+				State Procurement<br> 
+				State Resolution<br>
+				Municipal Resolutions<br>
+				State Regulation/ Rate-making/ Rule<br>
+				Municipal Regulation/ Rate-making/ Rule<br>
+			</span>
+		</div></p>
+		<form>
+			<label for="for">I lobbied for </label><br>
+			<input type="text" id="for" name="ans" required><br>
+		</form>
+		<p><strong>Are you finished reporting lobbying that you engaged in today or would you like to record another instance of lobbying?
+		</strong></p>
+		<form>
+			<input type="radio" id="record" name="a" value="record">
+			<label for="record">Record another instance of lobbying</label><br>
+			<input type="radio" id="print" name="a" value="print" onclick="window.print()">
+			<label for="print">Print Report of all lobbying.</label>
+		</form>	
+		<br>
+		<br>
+	</div>
+	<br>
+	<br>
+		<button type="submit" value="Submit" id="submit">Submit</button>
+		<button type="reset" value="Reset" id="reset">Reset</button>
+	</div>	
+	<div id="footer">
+		<p>Made by: Sydney Davidson</p>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="jquery/script.js"></script>
+</body>
+</html>

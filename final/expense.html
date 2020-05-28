@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Albany Law: Expenses Tool </title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		<img src="img/albany-law-school-logo.jpg" alt="logo">
+		<h1>Albany Law School: Nonprofit Expense Tracking Tool</h1>
+	</div>
+
+	<div id="nav">
+		<a href="final.html">Home</a>
+		<a href="genlobby.html">General Lobbying Information</a>
+		<a href="lobsocmed.html">Lobbying and Social Media</a>
+		<a href="expense.html" class="active">Nonprofit Expense Tracking Tool</a>
+		<a href="lobbying.html">Nonprofit Lobbying Tool</a>
+		<a href="contact.html">Contact Information</a>
+		<a href="https://www.albanylaw.edu/resources/new-york-non-profit-lobbying-guide-glossary-terms">Term Glossary</a>
+		<a href="disclaimer.html">Disclaimer</a>
+	</div>
+
+	<div id="expenses">
+		<h2>Welcome to the Nonprofit Expense-Tracking Web Tool</h2>
+		<p>This web tool is designed to help you keep track of your nonprofit organization’s expenses while engaged in lobbying activities.</p>
+		<div id="rest">
+			<p><strong>What did you incur expenses on?</strong></p>
+			<p>I incurred expenses on:</p>
+			<p>Check all that apply</p>
+			<form class="form" id="checks">
+				<input type="checkbox" id="billboard" value="billboard">
+	 		    <label for="billboard">Advertising: Billboards</label><br>
+	 		    <input type="checkbox" id="flyers" value="flyers">
+	 		    <label for="flyers">Advertising: Flyers</label><br>
+	 		    <input type="checkbox" id="printmed" value="print media">
+	 		    <label for="printmed">Advertising: Print Media</label><br>
+	 		    <input type="checkbox" id="tvradio" value="tvradio">
+	 		    <label for="tvradio">Advertising: Television/Radio</label><br>
+	 		    <input type="checkbox" id="bus" value="bus">
+	 		    <label for="bus">Buses for Lobby Event</label><br>
+	 		    <input type="checkbox" id="cell" value="cell">
+	 		    <label for="cell">Cell Phone</label><br>
+	 		    <input type="checkbox" id="comp" value="comp">
+	 		    <label for="comp">Computer/Internet</label><br>
+	 		    <input type="checkbox" id="cons" value="cons">
+	 		    <label for="cons">Consulting</label><br>
+	 		    <input type="checkbox" id="eadv" value="eadv">
+	 		    <label for="eadv">E-advocacy</label><br>
+	 		    <input type="checkbox" id="bill" value="bill">
+	 		    <label for="bill">Legislative Bill Tracking</label><br>
+	 		    <input type="checkbox" id="research" value="research">
+	 		    <label for="research">Legislative Research</label><br>
+	 		    <input type="checkbox" id="lodge" value="lodge">
+	 		    <label for="lodge">Lodging</label><br>
+	 		    <input type="checkbox" id="meals" value="meals">
+	 		    <label for="meals">Meals for Lobby event</label><br>
+	 		    <input type="checkbox" id="photocopy" value="photocopy">
+	 		    <label for="photocopy">Photocopies</label><br>
+	 		    <input type="checkbox" id="rallie" value="rallie">
+	 		    <label for="rallie">Rallies</label><br>
+	 		    <input type="checkbox" id="rent" value="rent">
+	 		    <label for="rent">Rent</label><br>
+	 		    <input type="checkbox" id="social" value="social">
+	 		    <label for="social">Social Event/Reception/Banquet</label><br>
+	 		    <input type="checkbox" id="socmed" value="socmed">
+	 		    <label for="socmed">Social Media: Websites</label><br>
+	 		    <input type="checkbox" id="travel" value="travel">
+	 		    <label for="travel">Travel Reimbursement: Train, Airfare, Car, Hotel</label><br>
+	 		    <label for="other">Other:</label>
+			    <input type="text" id="other" name="ans"><br>
+			</form>
+			<p><strong>What was the cost of those expenses?</strong></p>
+			<form>
+				<label for="spent">My organization spent $</label>
+				<input type="number" id="spent" name="spend">
+				<label for="on">on the expense of</label>
+				<input type="text" id="on" name="on">
+			</form>
+			<p><strong>Who or what was the expense paid to?</strong></p>
+			<form>
+				<label for="of">My organization paid the expenses of</label>
+				<input type="text" id="of" name="of"><br>
+				<label for="to">to</label>
+				<input type="text" id="to" name="to">
+				
+			</form>
+		    <p><strong>Are you finished reporting today or would you like to record another expense?</strong></p>
+			<form>
+				<input type="radio" id="record" value="record">
+				<label for="record">Record another expense</label><br>
+				<input type="radio" id="print" value="print" onclick="window.print()">
+				<label for="print">Print Report of all expenses.</label><br>
+				<input type="radio" id="compen" value="compen">
+				<label for="compen">Report compensation related to lobbying.</label><br>
+			</form>	
+		</div>
+
+		<div id="comps">
+			<p><strong>What are the details of compensation received?</strong></p>
+			<form>
+				<label for="amount">Amount $</label>
+				<input type="number" id="amount" name="amount"><br>
+				<br>
+				<label for="paidfrom">Paid from </label>
+				<input type="text" id="paidfrom" name="paidfrom"><br>
+				<label for="payment">Payment Method </label>
+				<p class="tip1">(?)
+					<span class="tooltip">Payment methods- includes cash, check, ACH / electronic funds trfer, card, etc.</span>
+				</p>
+				<input type="text" id="payment" name="payment"><br>
+				<label for="paymentnum">Payment Number </label>
+				<p class="tip1">(?)
+					<span class="tooltip">Payment number- the check number, trfer number, etc.</span>
+				</p>
+				<input type="text" id="paymentnum" name="pnum"><br>
+				<label for="type">Type of Compensation </label>
+				<p class="tip1">(?)
+					<span class="tooltip">Types of compensation- includes salary, fee, gift, payment, benefit, loan, advance, or any other thing of value.</span>
+				</p>
+				<input type="text" id="type" name="type"><br>
+			</form>
+			 <p><strong>Are you finished reporting compensation today or would you like to record another instance of compensation?</strong></p>
+			 <p>Once again – report just one instance of compensation paid at a time.  You will be asked to submit another report at the conclusion of your submission of this report.</p>
+				<div class="tip1">(?)
+					<span class="tooltip">Reportable Compensation- Any salary, fee, gift, payment, benefit, loan, advance, or any other thing of value paid, owed, given, or promised 	to the Lobbyist by the Client, or employer, in exchange for Lobbying or services that are otherwise in furtherance of Lobbying Activity, including year-end or other bonuses, but not fringe benefits.</span>
+				</div>
+				<br>
+				<br>
+			<form>
+				<input type="radio" id="record1" name="a" value="record">
+				<label for="record">Record another compensation</label><br>
+				<input type="radio" id="print1" name="a" value="print" onclick="window.print()">
+				<label for="print1">Print Report of all of compensation.</label><br>
+			</form>	
+		</div>
+		<br>
+		<button type="submit" value="Submit" id="submit">Submit</button>
+		<button type="reset" value="Reset" id="reset">Reset</button>
+	</div>
+	<div id="footer">
+		<p>Made by: Sydney Davidson</p>
+	</div>
+</div>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="jquery/script.js"></script>
+</body>
+
+</html>
